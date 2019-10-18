@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <!-- 数据中心ws地址 -->
+    <entry key="datacenter.ws.url">http://192.168.2.47:9999/ws</entry>
+</properties>
