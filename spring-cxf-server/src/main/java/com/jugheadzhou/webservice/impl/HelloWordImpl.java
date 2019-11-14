@@ -22,7 +22,7 @@ public class HelloWordImpl implements HelloWord {
 
         System.out.println("客户端"+user+"说："+content);
 
-        return "欢迎你: "+user;
+        return "欢迎你,"+user;
     }
 
     @Override

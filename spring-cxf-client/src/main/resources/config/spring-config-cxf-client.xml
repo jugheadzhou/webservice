@@ -15,5 +15,14 @@
     <jaxws:client id='helloWord'
                   serviceClass="com.jugheadzhou.webservice.HelloWord"
                   address="${datacenter.ws.url}/hello">
+
+        <!-- 配置客户端的出拦截器 -->
+        <jaxws:outInterceptors>
+            <bean class="org.apache.cxf.interceptor.LoggingOutInterceptor"></bean>
+            <bean class="com.jugheadzhou.interceptor.AuthorityOutInterceptor">
+                <constructor-arg name="name" value="jugheadzhou"></constructor-arg>
+                <constructor-arg name="password" value="123456"></constructor-arg>
+            </bean>
+        </jaxws:outInterceptors>
     </jaxws:client>
 </beans>

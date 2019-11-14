@@ -15,15 +15,10 @@
         http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
         http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
 
-	<import resource="classpath:META-INF/cxf/cxf.xml"/>
-	<import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
 
+	<context:property-placeholder location="classpath:system.xml" ignore-unresolvable="true"/>
 	<!-- 自动扫描 -->
 	<context:component-scan base-package="com.jugheadzhou.webservice" />
 
-	<!-- 定义服务提供者  -->
-	<jaxws:endpoint
-			implementor="#helloWorld"
-			address="/hello"
-	></jaxws:endpoint>
+	<import resource="classpath:config/spring-config-*.xml"/>
 </beans>
