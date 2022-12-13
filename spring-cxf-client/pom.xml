@@ -16,7 +16,7 @@
     <!-- spring版本号 -->
     <spring.version>4.3.11.RELEASE</spring.version>
     <!-- CXF版本号 -->
-    <cxf.version>3.1.14</cxf.version>
+    <cxf.version>3.4.10</cxf.version>
   </properties>
 
   <dependencies>
